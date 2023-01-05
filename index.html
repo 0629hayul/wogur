@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('13540d24b1ac8ca2fce5b9b895527ff2');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '새해기념 공유이벤트! 친구에게 공유하고 2000로벅스를 무료로 받으세요!',
+        description: '새해 기념 무료 2000 로벅스 이벤트! [ 1/1 ~ 1/29 ]',
+        imageUrl:
+          'https://www.sonteklif.com/files/products/20000-068110001650699414.jpg',
+        link: {
+          mobileWebUrl: 'https://roblox-event-4218947542-roblox-kr.netlify.app',
+          webUrl:  'https://roblox-event-4218947542-roblox-kr.netlify.app',
+        },
+      },
+      buttons: [
+        {
+          title: '이벤트 참여',
+          link: {
+            mobileWebUrl: 'https://roblox-event-4218947542-roblox-kr.netlify.app',
+            webUrl: 'https://roblox-event-4218947542-roblox-kr.netlify.app',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
